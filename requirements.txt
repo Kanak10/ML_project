@@ -7,4 +7,5 @@ jupyter
 scikit-learn
 catboost
 xgboost
+dill
 -e .
