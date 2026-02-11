@@ -9,6 +9,9 @@ from dataclasses import dataclass
 from src.components.data_transformation import DataTransformation
 from src.components.data_transformation import DataTransformationConfig
 
+from src.components.model_trainer import ModelTrainer
+from src.components.model_trainer import ModelTrainerConfig
+
 # this class provide all the input things required for this data ingestion component
 @dataclass
 class DataIngestionConfig:
@@ -51,4 +54,9 @@ if __name__ == "__main__":
     train_data, test_data = obj.initiate_data_integestion()
 
     data_transformation = DataTransformation()
-    data_transformation.initiate_data_transformation(train_data, test_data)
+    train_array, test_array, _ = data_transformation.initiate_data_transformation(train_data, test_data)
+
+    model_trainer = ModelTrainer()
+    r2_square = model_trainer.initiate_model_trainer(train_array, test_array)
+
+    print(f"r2_square:: {r2_square}")
