@@ -9,3 +9,5 @@ Setps to setup project:
     6. Now we do data transformation in which there is feature engineering, data cleaning, data encoding.
     7. Now we are train our model on different-different algos in src/components/model_trainer.py.
     8. Assignment to do hyperperameter tunning.
+    9. Create prediction pipeline in which we create web application from which we create a web application and where we get user details from form and for that we predict feature.
+    
